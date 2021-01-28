@@ -5,5 +5,65 @@
 }
 
 body{
+    background-color: #b7d7e830;
+    height: 1000px;
     font-family: 'Nunito', sans-serif;
+}
+
+.container{
+    width: 70%;
+    margin: auto;
+}
+
+.row::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.orange-button{
+    background-color: #ff7a59;
+    color: white;
+    border: 1px solid #ff7a59;
+    border-radius: .1875rem;
+    padding: 1.411em 2em;
+}
+
+
+
+/* header */
+nav .column{
+    float: left;
+    width: 50%;
+    /* DEBUG:  */
+    border: 1px solid black;
+    height: 100px;
+}
+
+header nav:last-child{
+    background-color: white;
+}
+
+
+
+/* jumbotron */
+.jumbotron{
+    position: relative;
+    /* DEBUG:  */
+    background-color: #f9d5e580;
+}
+
+.jumbotron .container{
+    /* DEBUG:  */
+    border: 1px solid black;
+    height: 650px;
+}
+
+#separator{
+    width: 100%
+    position: absolute;
+    bottom: 0;
+    /* DEBUG:  */
+    height: 100px;
+    background-color: #b7d7e8;
 }
