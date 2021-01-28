@@ -50,6 +50,9 @@ section{
 nav .column{
     float: left;
     width: 50%;
+    line-height: 100px;
+    font-size: 20px;
+    font-weight: 700;
     /* DEBUG:  */
     border: 1px solid black;
     height: 100px;
@@ -64,6 +67,22 @@ header nav:first-child{
 header nav:last-child{
     background-color: white;
 }
+
+nav li{
+    display: inline-block;
+    list-style-type: none;
+}
+
+#nav1 /* togli il padding a sx a English e metti la barretta verticale tra i due */
+
+
+nav a{
+    text-decoration: none;
+    color: #33475b;
+    padding: 0 20px;
+}
+
+
 
 
 
