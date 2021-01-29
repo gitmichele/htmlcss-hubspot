@@ -51,6 +51,12 @@ h4{
     font-weight: 700;
 }
 
+/* numeroni sparsi qua e là */
+.number{
+    font-size: 45px;
+    font-weight: 900;
+}
+
 /* check marker delle liste */
 .fa-check-circle{
     color: #ff7a59;
@@ -286,7 +292,7 @@ header nav:last-child{
 }
 
 .features img{
-    width: 35%;
+    height: 120px;
     margin-bottom: 20px;
 }
 
@@ -309,6 +315,7 @@ header nav:last-child{
 /* SEZIONE COMMUNITY */
 .community{
     background-image: linear-gradient(45deg,#00a4bd,#00bda5);
+    margin-bottom: 0;
 }
 
 .community .container{
@@ -330,11 +337,6 @@ header nav:last-child{
     float: left;
     width: 25%;
     text-align: center;
-}
-
-.community .column .number{
-    font-size: 45px;
-    font-weight: 900;
 }
 
 /* paddo l'interno di ogni colonna */
@@ -361,23 +363,39 @@ header nav:last-child{
 
 
 /* SEZIONE CUSTOMERS */
+.customers{
+    background-color: white;
+    margin: 0;
+    padding-top: 60px;
+}
+
+.customers .container{
+    width: 60%;
+}
+
 .customers .column:first-child{
     float: left;
-    width: 40%;
-    /* DEBUG:  */
-    border: 1px solid black;
-    height: 300px;
+    width: 30%;
+
 }
 
 .customers .column:last-child{
     float: left;
-    width: 60%;
+    width: 70%;
+}
+
+.customers p{
+    width: 65%;
 }
 
 
-
-
 /* SEZIONE GET STARTED */
+.get-started{
+    background-color: white;
+    margin: 0;
+    padding: 60px 0;
+}
+
 .get-started .column{
     float: left;
     width: 50%;
