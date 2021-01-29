@@ -8,15 +8,31 @@ body{
     background-color: #f5f8fa;
     font-family: 'Nunito', sans-serif;
     color: #33475b;
+    font-size: 18px;
 }
 
 /* stacco le varie sezioni - se cambio questo margine devo cambiare anche i margini di fast-links nel footer che sovrascrive questo*/
 section{
-    margin-bottom: 40px;
+    margin-bottom: 60px;
 }
 
 a{
     text-decoration: none;
+}
+
+h1{
+    font-size: 60px;
+    font-weight: 900;
+}
+
+h2{
+    font-size: 40px;
+    font-weight: 900;
+}
+
+h3{
+    font-size: 30px;
+    font-weight: 900;
 }
 
 /* tolti alcuni sfondi, il contenuto della pagina non è a tutta larghezza */
@@ -40,6 +56,7 @@ a{
     border-radius: 5px;
     padding: 1.411em 2em;
     display: inline-block;
+    font-weight: 700;
 }
 
 
@@ -57,7 +74,6 @@ nav .column{
     float: left;
     width: 50%;
     line-height: 80px;
-    font-size: 18px;
     font-weight: 700;
     height: 80px;
 }
@@ -151,13 +167,10 @@ header nav:last-child{
     padding: 30px 0;
 }
 
-h1{
+.jumbo-text > h1{
     padding-top: 60px;
-    font-size: 60px;
-    font-weight: 900;
     line-height: 60px;
 }
-
 
 
 
@@ -171,11 +184,20 @@ h1{
 
 
 
+
 /* SEZIONE "CUBO DI RUBIK" */
 .rubik .container{
-    /* DEBUG:  */
-    height: 400px;
-    border: 1px solid black;
+    text-align: center;
+}
+
+.rubik img{
+    width: 20%;
+}
+
+.rubik p{
+    padding-top: 30px;
+    width: 80%;
+    margin: auto;
 }
 
 
@@ -184,31 +206,32 @@ h1{
 /* SEZIONE FREE HUBSPOT */
 .free .row.container{
     background-color: white;
+    padding: 60px 0;
 }
 
 .free .column:first-child{
     float: left;
     width: 30%;
-    /* DEBUG:  */
-    height: 250px;
-    border: 1px solid black;
+    text-align: center;
 }
 
 .free .column:last-child{
     float: left;
     width: 70%;
-    /* DEBUG:  */
-    height: 250px;
-    border: 1px solid black;
 }
 
-
+.free img{
+    display: block;
+    width: 40%;
+    margin: auto;
+    margin-bottom: 30px;
+}
 
 
 /* SEZIONE FEATURES */
 .features .column{
     float: left;
-    width: calc((100% - 80px) / 3);
+    width: calc((100% - 120px) / 3);
     background-color: white;
     /* DEBUG:  */
     height: 650px;
@@ -216,7 +239,7 @@ h1{
 }
 
 .features .column:nth-child(2){
-    margin: 0 40px;
+    margin: 0 60px;
 }
 
 
@@ -276,7 +299,7 @@ footer{
 /* setto le 4 colonne e sovrascrivo i margini dati nelle regole generali */
 #fast-links .column{
     float: left;
-    margin: 40px 60px 80px 0;
+    margin: 60px 60px 80px 0;
     width: calc((100% - 240px) / 4);
     /* DEBUG:  */
     border: 1px solid black;
@@ -294,7 +317,7 @@ e sfondo body */
 #policy{
     margin-bottom: 0;
     /* DEBUG:  */
-    padding-bottom: 40px;
+    padding-bottom: 60px;
 }
 
 #policy .column{
