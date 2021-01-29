@@ -18,6 +18,15 @@ section{
 
 a{
     text-decoration: none;
+    color: #33475b;
+}
+
+li{
+    list-style-type: none;
+}
+
+p{
+    padding: 30px 0;
 }
 
 h1{
@@ -33,6 +42,16 @@ h2{
 h3{
     font-size: 30px;
     font-weight: 900;
+}
+
+h4{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.fa-check-circle{
+    color: #ff7a59;
+    padding-right: 10px;
 }
 
 /* tolti alcuni sfondi, il contenuto della pagina non è a tutta larghezza */
@@ -91,11 +110,6 @@ header nav:last-child{
 
 nav li{
     display: inline-block;
-    list-style-type: none;
-}
-
-nav a{
-    color: #33475b;
 }
 
 /* seleziono "contact us", lo distanzio e gli metto la barretta verticale a sx */
@@ -163,10 +177,6 @@ header nav:last-child{
     width: 45%;
 }
 
-.jumbo-text p{
-    padding: 30px 0;
-}
-
 .jumbo-text > h1{
     padding-top: 60px;
     line-height: 60px;
@@ -195,7 +205,7 @@ header nav:last-child{
 }
 
 .rubik p{
-    padding-top: 30px;
+    padding-bottom: 0;
     width: 80%;
     margin: auto;
 }
@@ -226,6 +236,30 @@ header nav:last-child{
     margin: auto;
     margin-bottom: 30px;
 }
+
+.free p{
+    width: 80%;
+}
+
+.free hr{
+    display: inline-block;
+    height: 3px;
+    width: 60%;
+    background-color: #33475b;
+    vertical-align: middle;
+    margin-left: 50px;
+}
+
+.free h4{
+    display: inline-block;
+}
+
+.free li{
+    display: inline-block;
+    padding: 20px 20px 0 0;
+}
+
+
 
 
 /* SEZIONE FEATURES */
