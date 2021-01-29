@@ -438,6 +438,7 @@ header nav:last-child{
 /* FOOTER */
 footer{
     background-color: #2d3e50;
+    color: #FFFFFF99
 }
 
 footer a{
@@ -485,6 +486,13 @@ footer a{
 
 #lang .container{
     border-bottom: 1px solid #FFFFFF99;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#lang li, #policy li{
+    padding: 0 10px 20px 10px;
+    display: inline-block;
 }
 
 /* sovrascrivo i margini dati nelle regole generali per evitare che in fondo
@@ -492,14 +500,19 @@ alla pagina si con il margin-bottom di 40px ci sia uno stacco tra sfondo header
 e sfondo body */
 #policy{
     margin-bottom: 0;
-    /* DEBUG:  */
-    padding-bottom: 60px;
 }
 
 #policy .column{
     float: left;
     width: 50%;
-    /* DEBUG:  */
-    border: 1px solid black;
-    height: 200px;
+}
+
+#policy .column:last-child{
+    text-align: right;
+}
+
+#policy p{
+    padding-top: 0;
+    font-weight: 700;
+    color: white;
 }
