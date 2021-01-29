@@ -388,6 +388,21 @@ header nav:last-child{
     width: 65%;
 }
 
+.nested-col{
+    float: left;
+    width: 25%;
+    line-height: 80px;
+    text-align: right;
+}
+
+.nested-col img{
+    width: 70%;
+    vertical-align: middle;
+}
+
+
+
+
 
 /* SEZIONE GET STARTED */
 .get-started{
@@ -399,9 +414,22 @@ header nav:last-child{
 .get-started .column{
     float: left;
     width: 50%;
-    /* DEBUG:  */
-    border: 1px solid black;
-    height: 500px;
+}
+
+.get-started .column:first-child{
+    padding-right: 5%;
+}
+
+.get-started .column:last-child{
+    text-align: right;
+}
+
+.get-started p:last-child{
+    font-size: 15px;
+}
+
+.get-started img{
+    width: 50%;
 }
 
 
