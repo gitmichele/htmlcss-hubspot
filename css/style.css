@@ -1,3 +1,4 @@
+/* REGOLE GENERALI */
 *{
     margin: 0;
     padding: 0;
@@ -16,6 +17,7 @@ section{
     margin-bottom: 60px;
 }
 
+/* regole di testo generali */
 a{
     text-decoration: none;
     color: #33475b;
@@ -49,6 +51,7 @@ h4{
     font-weight: 700;
 }
 
+/* check marker delle liste */
 .fa-check-circle{
     color: #ff7a59;
     padding-right: 10px;
@@ -170,9 +173,6 @@ header nav:last-child{
     margin-bottom: 0;
 }
 
-.jumbotron .container{
-}
-
 .jumbo-text{
     width: 45%;
 }
@@ -189,7 +189,8 @@ header nav:last-child{
 #divider{
     height: 80px;
     background-color: #99deda;
-    border: 3px solid #33475b;
+    border-top: 3px solid #33475b;
+    border-bottom: 3px solid #33475b;
 }
 
 
@@ -204,6 +205,7 @@ header nav:last-child{
     width: 20%;
 }
 
+/* devo resettare il padding perchè questa sezione finisce con il paragrafo e quindi il suo padding si sommerebbe al margine inferiori dato di base alle sezioni */
 .rubik p{
     padding-bottom: 0;
     width: 80%;
@@ -219,12 +221,14 @@ header nav:last-child{
     padding: 60px 0;
 }
 
+/* colonna a sinistra */
 .free .column:first-child{
     float: left;
     width: 30%;
     text-align: center;
 }
 
+/* colonna a destra */
 .free .column:last-child{
     float: left;
     width: 70%;
@@ -241,6 +245,7 @@ header nav:last-child{
     width: 80%;
 }
 
+/* linea a lato di h4 */
 .free hr{
     display: inline-block;
     height: 3px;
@@ -269,10 +274,12 @@ header nav:last-child{
     background-color: white;
 }
 
+/* margini laterali alla colonna centrale */
 .features .column:nth-child(2){
     margin: 0 60px;
 }
 
+/* contenitore interno alle colonne per gestire margine e posizione di tutto il suo contenuto (forse è eccessivo - potevo dare text align a column e gestire i margini a mano?) */
 .col-obj{
     margin: 20px 40px;
     text-align: center;
@@ -302,7 +309,6 @@ header nav:last-child{
 /* SEZIONE COMMUNITY */
 .community{
     background-image: linear-gradient(45deg,#00a4bd,#00bda5);
-
 }
 
 .community .container{
@@ -319,6 +325,7 @@ header nav:last-child{
     padding-bottom: 60px;
 }
 
+/* due righe da 4 colonne */
 .community .column{
     float: left;
     width: 25%;
@@ -330,15 +337,18 @@ header nav:last-child{
     font-weight: 900;
 }
 
+/* paddo l'interno di ogni colonna */
 .community .column img, .community .column p{
     padding: 20px 0;
     font-size: 15px;
 }
 
+/* prendo le colonne della seconda riga e gli metto un bordo superiore */
 .community .row:last-child .column:nth-child(1n+1){
     border-top: 1px solid white;
 }
 
+/* prendo tutte le colonne a parte le prima di ogni riga e metto un bordo a sx */
 .community .column:nth-child(1n+2){
     border-left: 1px solid white;
 }
