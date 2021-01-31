@@ -186,7 +186,7 @@ header nav:last-child{
 /* do un colore di sfondo uguale a quello dell'immagine per non doverne modificare le dimensioni per coprire tutta la vw.
 bg position - bottom (right) perchè così anche quando stringo troppo la vw e l'altezza del jumbotron supera quella del bg, quest'ultimo resta attaccato al suo bordo inferiore (insieme allo pseudoselettore "divisore") e non va a creare spazi vuoti tra il divisore e il bg dovuti alla discrepanza di altezza tra i due. La parte superiore può invece sfogare quanto vuole tanto c'è il colore di background che va a coprire gli spazi lasciati vuoti dall'immagine*/
 .jumbotron{
-    background-image: url(../img/jumbotron.png), linear-gradient(to top right,#fef8f0,#fff3ee,#fff1ee);
+    background-image: url(../img/jumbotron.png), linear-gradient(to top right,#fef8f0,#fff3ee,#fff1ee); /*colore di sfondo rubato dal sito originale*/
     background-position: bottom right;
     height: 650px;
     background-size: contain;
@@ -267,7 +267,7 @@ bg position - bottom (right) perchè così anche quando stringo troppo la vw e l
     margin-bottom: 30px;
 }
 
-/* aggiungo un contenitore per tutto il contenuto perchè anche se basterebbe andare ad agire sulla larghezza del paragrafo, a differenza della colonna di sx (1 img e 1 a) qua abbiamo vari livelli e una concreta possibilità di cambiamenti di testo o disposizione*/
+/* come per la sezione successiva, aggiungo un contenitore per tutto il contenuto perchè anche se basterebbe andare ad agire sulla larghezza del paragrafo, a differenza della colonna di sx (1 img e 1 a) qua abbiamo vari livelli e una concreta possibilità di cambiamenti di testo o disposizione*/
 .free .col-obj{
     margin:0 20% 0 0;
     text-align: left;
@@ -297,6 +297,7 @@ bg position - bottom (right) perchè così anche quando stringo troppo la vw e l
 
 
 /* SEZIONE FEATURES */
+/* 3 colonne uguali */
 .features .column{
     float: left;
     width: calc((100% - 120px) / 3);
@@ -316,11 +317,13 @@ bg position - bottom (right) perchè così anche quando stringo troppo la vw e l
     text-align: center;
 }
 
+/* lavoro sull'altezza delle immagini che, avendo dimensioni diverse, cambeerebbero le altezze tra le colonne */
 .features img{
     height: 120px;
     margin-bottom: 20px;
 }
 
+/* WARNING: se cambia la lunghezza del testo cambia chiaramente la lunghezza delle colonne. */
 .features p{
     padding-bottom: 60px;
     border-bottom: 2px solid #33475b;
@@ -338,16 +341,19 @@ bg position - bottom (right) perchè così anche quando stringo troppo la vw e l
 
 
 /* SEZIONE COMMUNITY */
+/* sfondo della sezione rubato dal sito originale */
 .community{
     background-image: linear-gradient(45deg,#00a4bd,#00bda5);
     margin-bottom: 0;
 }
 
+/* testo bianco a differenza del resto del main */
 .community .container{
     text-align: center;
     color: white;
 }
 
+/* in questa sezione lavoro su margini e padding dei singoli elementi invece di chiudere tutto in un ulteriore contenitore perchè sono pochi elemeni ben strutturati che si prendono tutta la larghezza del .container e hanno la possibilità di sfogare a piacere in verticale*/
 .community h2{
     padding-top: 60px;
     line-height: 40px;
@@ -357,6 +363,11 @@ bg position - bottom (right) perchè così anche quando stringo troppo la vw e l
     padding-bottom: 60px;
 }
 
+.community .row:last-child{
+    padding-bottom: 80px;
+}
+
+/* oggetto "tabella" */
 /* due righe da 4 colonne */
 .community .column{
     float: left;
@@ -377,10 +388,6 @@ bg position - bottom (right) perchè così anche quando stringo troppo la vw e l
 /* prendo tutte le colonne a parte le prima di ogni riga e metto un bordo a sx */
 .community .column:nth-child(1n+2){
     border-left: 1px solid white;
-}
-
-.community .row:last-child{
-    padding-bottom: 80px;
 }
 
 
