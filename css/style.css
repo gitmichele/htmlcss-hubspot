@@ -100,7 +100,7 @@ h4{
         position: sticky;
         top: 0;
         z-index: 999;
-    }
+}
 
 nav .column{
     float: left;
@@ -127,18 +127,19 @@ nav li{
 }
 
 /* seleziono "contact us", lo distanzio e gli metto la barretta verticale a sx */
-#nav1 div:first-child li:last-child a{
+#nav1-left > li:last-child a{
     padding-left: 20px;
     margin-left: 20px;
     border-left: 2px solid #33475b;
 }
 
-#nav1 div:last-child, #nav2 div:last-child{
+/* allineo le navbar di dx a filo margine dx */
+#nav1-right, #nav2-right{
     text-align: right;
 }
 
 /* seleziono login */
-#nav1 div:last-child li:nth-child(2) a{
+#nav1-right li:nth-child(2) a{
     margin: 0 20px;
     padding: 8px 8px;
     border: 1px solid #ff7a59;
@@ -146,28 +147,34 @@ nav li{
     color: #ff7a59;
 }
 
-#nav1 .fa-search{
+/* colore lente ingrandimento */
+#nav1-right .fa-search{
     color: #1E90FF;
 }
 
-#nav1 .orange-button{
+/* unico bottone arancione con padding diverso */
+#nav1-right .orange-button{
     display: inline;
     padding: 8px 8px;
 }
 
 /* riga inferiore */
-#nav2 img{
+/* seleziono l'immagine-logo */
+header nav:last-child img{
     vertical-align: middle;
 }
 
-#nav2 div:last-child li:nth-child(1n+2){
+/* margine sx a tutte le voci della navbar inferiore di dx*/
+#nav2-right li{
     margin-left: 20px;
 }
 
-#nav2 .fa-angle-down{
+/* margine a tutte le icone angle-down */
+#nav2-right .fa-angle-down{
     margin-left: 10px;
 }
 
+/* bordo tra i due header */
 header nav:last-child{
     border-top: 1px solid black;
 }
@@ -210,6 +217,8 @@ bg position - bottom (right) perchè così anche quando stringo troppo la vw e l
 }
 
 
+
+
 /* SEZIONE "CUBO DI RUBIK" */
 .rubik .container{
     text-align: center;
@@ -219,7 +228,7 @@ bg position - bottom (right) perchè così anche quando stringo troppo la vw e l
     width: 20%;
 }
 
-/* devo resettare il padding perchè questa sezione finisce con il paragrafo e quindi il suo padding si sommerebbe al margine inferiori dato di base alle sezioni */
+/* devo resettare il padding perchè questa è l'unica sezione che finisce con un paragrafo e quindi il suo padding si sommerebbe al margine inferiore alle sezioni dato nelle regole generali */
 .rubik p{
     padding-bottom: 0;
     width: 80%;
@@ -230,6 +239,7 @@ bg position - bottom (right) perchè così anche quando stringo troppo la vw e l
 
 
 /* SEZIONE FREE HUBSPOT */
+/* aggiungo e sovrascrivo alcune regole generali del container */
 .free .row.container{
     background-color: white;
     padding: 60px 0;
@@ -257,8 +267,10 @@ bg position - bottom (right) perchè così anche quando stringo troppo la vw e l
     margin-bottom: 30px;
 }
 
-.free p{
-    width: 80%;
+/* aggiungo un contenitore per tutto il contenuto perchè anche se basterebbe andare ad agire sulla larghezza del paragrafo, a differenza della colonna di sx (1 img e 1 a) qua abbiamo vari livelli e una concreta possibilità di cambiamenti di testo o disposizione*/
+.free .col-obj{
+    margin:0 20% 0 0;
+    text-align: left;
 }
 
 /* linea a lato di h4 */
@@ -275,6 +287,7 @@ bg position - bottom (right) perchè così anche quando stringo troppo la vw e l
     display: inline-block;
 }
 
+/* navbar sulla stessa riga */
 .free li{
     display: inline-block;
     padding: 20px 20px 0 0;
