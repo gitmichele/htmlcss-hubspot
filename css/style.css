@@ -12,7 +12,7 @@ body{
     font-size: 18px;
 }
 
-/* stacco le varie sezioni - se cambio questo margine devo cambiare anche i margini di fast-links nel footer che sovrascrive questo*/
+/* stacco le varie sezioni - se cambio questo margine devo cambiare anche i margini di fast-links nel footer che sovrascrivono questo*/
 section{
     margin-bottom: 60px;
 }
@@ -29,6 +29,10 @@ li{
 
 p{
     padding: 30px 0;
+}
+
+.small{
+    font-size: 15px;
 }
 
 h1{
@@ -171,12 +175,15 @@ header nav:last-child{
 
 
 /* JUMBOTRON */
+/* do un colore di sfondo uguale a quello dell'immagine per non doverne modificare le dimensioni per coprire tutta la vw.
+bg position - bottom (right) perchè così anche quando stringo troppo la vw e l'altezza del jumbotron supera quella del bg, quest'ultimo resta attaccato al suo bordo inferiore (insieme allo pseudoselettore "divisore") e non va a creare spazi vuoti tra il divisore e il bg dovuti alla discrepanza di altezza tra i due. La parte superiore può invece sfogare quanto vuole tanto c'è il colore di background che va a coprire gli spazi lasciati vuoti dall'immagine*/
 .jumbotron{
-    background-image: url(../img/jumbotron.png);
-    background-position: right;
-    height: 690px;
-    background-size: cover;
-    margin-bottom: 0;
+    background-image: url(../img/jumbotron.png), linear-gradient(to top right,#fef8f0,#fff3ee,#fff1ee);
+    background-position: bottom right;
+    height: 650px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
 }
 
 .jumbo-text{
@@ -188,18 +195,18 @@ header nav:last-child{
     line-height: 60px;
 }
 
-
-
-
-/* separatore orizzintale tra jumbotron e main */
-#divider{
-    height: 80px;
+/* "divisore" tra jumbotron e main che copre la parte inferiore del jumbotron */
+.jumbotron::after{
+    content: "";
+    display: block;
+    position: absolute;
+    height: calc(92px - 2vh);
+    width: 100%;
+    bottom: 0;
     background-color: #99deda;
     border-top: 3px solid #33475b;
     border-bottom: 3px solid #33475b;
 }
-
-
 
 
 /* SEZIONE "CUBO DI RUBIK" */
@@ -225,6 +232,8 @@ header nav:last-child{
 .free .row.container{
     background-color: white;
     padding: 60px 0;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px 1px lightgray;
 }
 
 /* colonna a sinistra */
@@ -278,6 +287,8 @@ header nav:last-child{
     float: left;
     width: calc((100% - 120px) / 3);
     background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px 1px lightgray;
 }
 
 /* margini laterali alla colonna centrale */
@@ -342,7 +353,6 @@ header nav:last-child{
 /* paddo l'interno di ogni colonna */
 .community .column img, .community .column p{
     padding: 20px 0;
-    font-size: 15px;
 }
 
 /* prendo le colonne della seconda riga e gli metto un bordo superiore */
@@ -471,7 +481,7 @@ footer a{
 }
 
 #white-button{
-    padding: 8px;
+    padding: 10px;
     background-color: #FFFFFF99;
     color: #2d3e50;
     border-radius: 5px;
