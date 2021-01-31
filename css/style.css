@@ -35,14 +35,10 @@ p{
     font-size: 15px;
 }
 
-h1{
-    font-size: 60px;
-    font-weight: 900;
-}
-
 h2{
     font-size: 40px;
     font-weight: 900;
+    line-height: 40px;
 }
 
 h3{
@@ -199,6 +195,8 @@ bg position - bottom (right) perchè così anche quando stringo troppo la vw e l
 }
 
 .jumbo-text > h1{
+    font-size: 60px;
+    font-weight: 900;
     padding-top: 60px;
     line-height: 60px;
 }
@@ -267,9 +265,9 @@ bg position - bottom (right) perchè così anche quando stringo troppo la vw e l
     margin-bottom: 30px;
 }
 
-/* come per la sezione successiva, aggiungo un contenitore per tutto il contenuto perchè anche se basterebbe andare ad agire sulla larghezza del paragrafo, a differenza della colonna di sx (1 img e 1 a) qua abbiamo vari livelli e una concreta possibilità di cambiamenti di testo o disposizione*/
-.free .col-obj{
-    margin:0 20% 0 0;
+/* paddo l'interno della seconda colonna. La prima consiste solo di un "img" e un "a", difficilmente cambierà struttura */
+.free .column:last-child{
+    padding:0 20% 0 0;
     text-align: left;
 }
 
@@ -311,13 +309,13 @@ bg position - bottom (right) perchè così anche quando stringo troppo la vw e l
     margin: 0 60px;
 }
 
-/* contenitore interno alle colonne per gestire margine e posizione di tutto il suo contenuto (forse è eccessivo - potevo dare text align a column e gestire i margini a mano?) */
-.col-obj{
-    margin: 20px 40px;
+/* paddo l'interno delle colonne */
+.features .column{
+    padding: 20px 40px;
     text-align: center;
 }
 
-/* lavoro sull'altezza delle immagini che, avendo dimensioni diverse, cambeerebbero le altezze tra le colonne */
+/* lavoro sull'altezza delle immagini che, avendo dimensioni diverse, cambierebbero le altezze tra le colonne */
 .features img{
     height: 120px;
     margin-bottom: 20px;
@@ -353,19 +351,15 @@ bg position - bottom (right) perchè così anche quando stringo troppo la vw e l
     color: white;
 }
 
-/* in questa sezione lavoro su margini e padding dei singoli elementi invece di chiudere tutto in un ulteriore contenitore perchè sono pochi elemeni ben strutturati che si prendono tutta la larghezza del .container e hanno la possibilità di sfogare a piacere in verticale*/
-.community h2{
-    padding-top: 60px;
-    line-height: 40px;
+/* paddo l'interno della sezione */
+.community .container{
+    padding: 60px 0 80px 0;
 }
 
 .community .container  > p{
     padding-bottom: 60px;
 }
 
-.community .row:last-child{
-    padding-bottom: 80px;
-}
 
 /* oggetto "tabella" */
 /* due righe da 4 colonne */
@@ -394,16 +388,19 @@ bg position - bottom (right) perchè così anche quando stringo troppo la vw e l
 
 
 /* SEZIONE CUSTOMERS */
+/* sfondo bianco a tutta pagina */
 .customers{
     background-color: white;
     margin: 0;
     padding-top: 60px;
 }
 
+/* sezione ancora più "stretta" del .container generale */
 .customers .container{
     width: 60%;
 }
 
+/* due colonne di dimensioni diverse */
 .customers .column:first-child{
     float: left;
     width: 30%;
@@ -415,10 +412,12 @@ bg position - bottom (right) perchè così anche quando stringo troppo la vw e l
     width: 70%;
 }
 
+/* paddo l'interno della colonna - p è l'unico elemento realmente interessato dalla cosa */
 .customers p{
     width: 65%;
 }
 
+/* mini-contenitori per i loghi */
 .nested-col{
     float: left;
     width: 25%;
@@ -426,6 +425,7 @@ bg position - bottom (right) perchè così anche quando stringo troppo la vw e l
     text-align: right;
 }
 
+/* dimensioni dei loghi */
 .nested-col img{
     width: 70%;
     vertical-align: middle;
@@ -436,29 +436,30 @@ bg position - bottom (right) perchè così anche quando stringo troppo la vw e l
 
 
 /* SEZIONE GET STARTED */
+/* stesso background di sopra resetto i margini generali delle sezioni per evitare di vedere il background di body tra questa sezione e il footer. il padding inferire è 30px perchè va a sommarsi al padding generale dato al paragrafo con cui si chiude la sezione*/
 .get-started{
     background-color: white;
     margin: 0;
-    padding: 60px 0;
+    padding: 60px 0 30px 0;
 }
 
+/* due colonne uguali */
 .get-started .column{
     float: left;
     width: 50%;
 }
 
+/* paddo l'interno della colonna sx */
 .get-started .column:first-child{
-    padding-right: 5%;
+    padding: 5% 5% 0 0;
 }
 
+/* dispongo gli elementi all'interno della colonna dx */
 .get-started .column:last-child{
     text-align: right;
 }
 
-.get-started p:last-child{
-    font-size: 15px;
-}
-
+/* dimensiono immagine */
 .get-started img{
     width: 50%;
 }
