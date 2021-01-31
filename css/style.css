@@ -121,6 +121,7 @@ header nav:last-child{
     background-color: white;
 }
 
+/* navbar orizzontali */
 nav li{
     display: inline-block;
 }
