@@ -7,9 +7,9 @@
 
 body{
     background-color: #f5f8fa;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'Montserrat', sans-serif;
     color: #33475b;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 /* stacco le varie sezioni - se cambio questo margine devo cambiare anche i margini di fast-links nel footer che sovrascrivono questo*/
@@ -28,22 +28,24 @@ li{
 }
 
 p{
+    font-weight: 500;
     padding: 30px 0;
+    line-height: 25px;
 }
 
 .small{
-    font-size: 15px;
+    font-size: 13px;
 }
 
 h2{
     font-size: 40px;
-    font-weight: 900;
+    font-weight: 700;
     line-height: 40px;
 }
 
 h3{
     font-size: 30px;
-    font-weight: 900;
+    font-weight: 700;
 }
 
 h4{
@@ -54,7 +56,7 @@ h4{
 /* numeroni sparsi qua e là */
 .number{
     font-size: 45px;
-    font-weight: 900;
+    font-weight: 700;
 }
 
 /* check marker delle liste */
@@ -63,7 +65,7 @@ h4{
     padding-right: 10px;
 }
 
-/* tolti alcuni sfondi, il contenuto della pagina non è a tutta larghezza */
+/* contenitore generale */
 .container{
     width: 70%;
     margin: auto;
@@ -195,8 +197,8 @@ bg position - bottom (right) perchè così anche quando stringo troppo la vw e l
 }
 
 .jumbo-text > h1{
-    font-size: 60px;
-    font-weight: 900;
+    font-size: 50px;
+    font-weight: 700;
     padding-top: 60px;
     line-height: 60px;
 }
@@ -220,6 +222,7 @@ bg position - bottom (right) perchè così anche quando stringo troppo la vw e l
 /* SEZIONE "CUBO DI RUBIK" */
 .rubik .container{
     text-align: center;
+    padding: 0 5%;
 }
 
 .rubik img{
@@ -278,11 +281,11 @@ bg position - bottom (right) perchè così anche quando stringo troppo la vw e l
     width: 60%;
     background-color: #33475b;
     vertical-align: middle;
-    margin-left: 50px;
 }
 
 .free h4{
     display: inline-block;
+    margin-right: 30px;
 }
 
 /* navbar sulla stessa riga */
