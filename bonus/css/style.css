@@ -1,0 +1,553 @@
+/* REGOLE GENERALI */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #f5f8fa;
+    font-family: 'Montserrat', sans-serif;
+    color: #33475b;
+    font-size: 16px;
+}
+
+/* stacco le varie sezioni - se cambio questo margine devo cambiare anche i margini di fast-links nel footer che sovrascrivono questo*/
+section{
+    margin-bottom: 60px;
+}
+
+/* regole di testo generali */
+a{
+    text-decoration: none;
+    color: #33475b;
+}
+
+li{
+    list-style-type: none;
+}
+
+p{
+    font-weight: 500;
+    padding: 30px 0;
+    line-height: 25px;
+}
+
+.small{
+    font-size: 13px;
+}
+
+h2{
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 40px;
+}
+
+h3{
+    font-size: 30px;
+    font-weight: 700;
+}
+
+h4{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* numeroni sparsi qua e là */
+.number{
+    font-size: 45px;
+    font-weight: 700;
+}
+
+/* check marker delle liste */
+.fa-check-circle{
+    color: #ff7a59;
+    padding-right: 10px;
+}
+
+/* contenitore generale */
+.container{
+    width: 70%;
+    margin: auto;
+}
+
+/* clearfix */
+.row::after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* un sacco di pulsanti arancioni tutti uguali */
+.orange-button{
+    background-color: #ff7a59;
+    color: white;
+    border: 1px solid #ff7a59;
+    border-radius: 5px;
+    padding: 1.411em 2em;
+    display: inline-block;
+    font-weight: 700;
+}
+
+
+
+/* HEADER */
+/* header resta sempre in primo piano attaccato in cima scrollando la pagina */
+.stick{
+        width: 100%;
+        position: sticky;
+        top: 0;
+        z-index: 999;
+}
+
+nav .column{
+    float: left;
+    width: 50%;
+    line-height: 80px;
+    font-weight: 700;
+    height: 80px;
+}
+
+/* riga superiore */
+/* setto i background color perchè così scrollando prendono il background di .stick
+e vanno sopra tutto */
+header nav:first-child{
+    background-color: #f5f8fa;
+}
+
+header nav:last-child{
+    background-color: white;
+}
+
+/* navbar orizzontali */
+nav li{
+    display: inline-block;
+}
+
+/* seleziono "contact us", lo distanzio e gli metto la barretta verticale a sx */
+#nav1-left > li:last-child a{
+    padding-left: 20px;
+    margin-left: 20px;
+    border-left: 2px solid #33475b;
+}
+
+/* allineo le navbar di dx a filo margine dx */
+#nav1-right, #nav2-right{
+    text-align: right;
+}
+
+/* seleziono login */
+#nav1-right li:nth-child(2) a{
+    margin: 0 20px;
+    padding: 8px 8px;
+    border: 1px solid #ff7a59;
+    border-radius: 5px;
+    color: #ff7a59;
+}
+
+/* colore lente ingrandimento */
+#nav1-right .fa-search{
+    color: #1E90FF;
+}
+
+/* unico bottone arancione con padding diverso */
+#nav1-right .orange-button{
+    display: inline;
+    padding: 8px 8px;
+}
+
+/* riga inferiore */
+/* seleziono l'immagine-logo */
+header nav:last-child img{
+    vertical-align: middle;
+}
+
+/* margine sx a tutte le voci della navbar inferiore di dx*/
+#nav2-right li{
+    margin-left: 20px;
+}
+
+/* margine a tutte le icone angle-down */
+#nav2-right .fa-angle-down{
+    margin-left: 10px;
+}
+
+/* bordo tra i due header */
+header nav:last-child{
+    border-top: 1px solid black;
+}
+
+
+
+
+/* JUMBOTRON */
+/* do un colore di sfondo uguale a quello dell'immagine per non doverne modificare le dimensioni per coprire tutta la vw.
+bg position - bottom (right) perchè così anche quando stringo troppo la vw e l'altezza del jumbotron supera quella del bg, quest'ultimo resta attaccato al suo bordo inferiore (insieme allo pseudoselettore "divisore") e non va a creare spazi vuoti tra il divisore e il bg dovuti alla discrepanza di altezza tra i due. La parte superiore può invece sfogare quanto vuole tanto c'è il colore di background che va a coprire gli spazi lasciati vuoti dall'immagine*/
+.jumbotron{
+    background-image: url(../img/jumbotron.png), linear-gradient(to top right,#fef8f0,#fff3ee,#fff1ee); /*colore di sfondo rubato dal sito originale*/
+    background-position: bottom right;
+    height: 650px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.jumbo-text{
+    width: 45%;
+}
+
+.jumbo-text > h1{
+    font-size: 50px;
+    font-weight: 700;
+    padding-top: 60px;
+    line-height: 60px;
+}
+
+/* "divisore" tra jumbotron e main che copre la parte inferiore del jumbotron */
+.jumbotron::after{
+    content: "";
+    display: block;
+    position: absolute;
+    height: calc(92px - 2vh);
+    width: 100%;
+    bottom: 0;
+    background-color: #99deda;
+    border-top: 3px solid #33475b;
+    border-bottom: 3px solid #33475b;
+}
+
+
+
+
+/* SEZIONE "CUBO DI RUBIK" */
+.rubik .container{
+    text-align: center;
+    padding: 0 5%;
+}
+
+.rubik img{
+    width: 20%;
+}
+
+/* devo resettare il padding perchè questa è l'unica sezione che finisce con un paragrafo e quindi il suo padding si sommerebbe al margine inferiore alle sezioni dato nelle regole generali */
+.rubik p{
+    padding-bottom: 0;
+    width: 80%;
+    margin: auto;
+}
+
+
+
+
+/* SEZIONE FREE HUBSPOT */
+/* aggiungo e sovrascrivo alcune regole generali del container */
+.free .row.container{
+    background-color: white;
+    padding: 60px 0;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px 1px lightgray;
+}
+
+/* colonna a sinistra */
+.free .column:first-child{
+    float: left;
+    width: 30%;
+    text-align: center;
+}
+
+/* colonna a destra */
+.free .column:last-child{
+    float: left;
+    width: 70%;
+}
+
+.free img{
+    display: block;
+    width: 40%;
+    margin: auto;
+    margin-bottom: 30px;
+}
+
+/* paddo l'interno della seconda colonna. La prima consiste solo di un "img" e un "a", difficilmente cambierà struttura */
+.free .column:last-child{
+    padding:0 20% 0 0;
+    text-align: left;
+}
+
+/* linea a lato di h4 */
+.free hr{
+    display: inline-block;
+    height: 3px;
+    width: 60%;
+    background-color: #33475b;
+    vertical-align: middle;
+}
+
+.free h4{
+    display: inline-block;
+    margin-right: 30px;
+}
+
+/* navbar sulla stessa riga */
+.free li{
+    display: inline-block;
+    padding: 20px 20px 0 0;
+}
+
+
+
+
+/* SEZIONE FEATURES */
+/* 3 colonne uguali */
+.features .column{
+    float: left;
+    width: calc((100% - 120px) / 3);
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px 1px lightgray;
+}
+
+/* margini laterali alla colonna centrale */
+.features .column:nth-child(2){
+    margin: 0 60px;
+}
+
+/* paddo l'interno delle colonne */
+.features .column{
+    padding: 20px 40px;
+    text-align: center;
+}
+
+/* lavoro sull'altezza delle immagini che, avendo dimensioni diverse, cambierebbero le altezze tra le colonne */
+.features img{
+    height: 120px;
+    margin-bottom: 20px;
+}
+
+/* WARNING: se cambia la lunghezza del testo cambia chiaramente la lunghezza delle colonne. */
+.features p{
+    padding-bottom: 60px;
+    border-bottom: 2px solid #33475b;
+    margin-bottom: 30px;
+}
+
+.features ol{
+    text-align: left;
+    margin: 30px 0 60px 0;
+}
+
+
+
+
+
+
+/* SEZIONE COMMUNITY */
+/* sfondo della sezione rubato dal sito originale */
+.community{
+    background-image: linear-gradient(45deg,#00a4bd,#00bda5);
+    margin-bottom: 0;
+}
+
+/* testo bianco a differenza del resto del main */
+.community .container{
+    text-align: center;
+    color: white;
+}
+
+/* paddo l'interno della sezione */
+.community .container{
+    padding: 60px 0 80px 0;
+}
+
+.community .container  > p{
+    padding-bottom: 60px;
+}
+
+
+/* oggetto "tabella" */
+/* due righe da 4 colonne */
+.community .column{
+    float: left;
+    width: 25%;
+    text-align: center;
+}
+
+/* paddo l'interno di ogni colonna */
+.community .column img, .community .column p{
+    padding: 20px 0;
+}
+
+/* prendo le colonne della seconda riga e gli metto un bordo superiore */
+.community .row:last-child .column:nth-child(1n+1){
+    border-top: 1px solid white;
+}
+
+/* prendo tutte le colonne a parte le prima di ogni riga e metto un bordo a sx */
+.community .column:nth-child(1n+2){
+    border-left: 1px solid white;
+}
+
+
+
+
+/* SEZIONE CUSTOMERS */
+/* sfondo bianco a tutta pagina */
+.customers{
+    background-color: white;
+    margin: 0;
+    padding-top: 60px;
+}
+
+/* sezione ancora più "stretta" del .container generale */
+.customers .container{
+    width: 60%;
+}
+
+/* due colonne di dimensioni diverse */
+.customers .column:first-child{
+    float: left;
+    width: 30%;
+
+}
+
+.customers .column:last-child{
+    float: left;
+    width: 70%;
+}
+
+/* paddo l'interno della colonna - p è l'unico elemento realmente interessato dalla cosa */
+.customers p{
+    width: 65%;
+}
+
+/* mini-contenitori per i loghi */
+.nested-col{
+    float: left;
+    width: 25%;
+    line-height: 80px;
+    text-align: right;
+}
+
+/* dimensioni dei loghi */
+.nested-col img{
+    width: 70%;
+    vertical-align: middle;
+}
+
+
+
+
+
+/* SEZIONE GET STARTED */
+/* stesso background di sopra resetto i margini generali delle sezioni per evitare di vedere il background di body tra questa sezione e il footer. il padding inferire è 30px perchè va a sommarsi al padding generale dato al paragrafo con cui si chiude la sezione*/
+.get-started{
+    background-color: white;
+    margin: 0;
+    padding: 60px 0 30px 0;
+}
+
+/* due colonne uguali */
+.get-started .column{
+    float: left;
+    width: 50%;
+}
+
+/* paddo l'interno della colonna sx */
+.get-started .column:first-child{
+    padding: 5% 5% 0 0;
+}
+
+/* dispongo gli elementi all'interno della colonna dx */
+.get-started .column:last-child{
+    text-align: right;
+}
+
+/* dimensiono immagine */
+.get-started img{
+    width: 50%;
+}
+
+
+
+
+/* FOOTER */
+footer{
+    background-color: #2d3e50;
+    color: #FFFFFF99
+}
+
+footer a{
+    color: #FFFFFF99;
+    font-weight: 700;
+}
+
+#fast-links li:first-child a{
+    color: white;
+    font-weight: 900;
+}
+
+/* setto le 4 colonne e sovrascrivo i margini dati nelle regole generali */
+#fast-links .column{
+    float: left;
+    margin: 60px 60px 80px 0;
+    width: calc((100% - 240px) / 4);
+}
+
+#fast-links li{
+    margin-bottom: 15px;
+}
+
+#fast-links li:first-child{
+    padding-bottom: 20px;
+}
+
+#fast-links i{
+    padding-right: 30px;
+}
+
+#white-button{
+    padding: 10px;
+    background-color: #FFFFFF99;
+    color: #2d3e50;
+    border-radius: 5px;
+}
+
+#gimmespace{
+    padding: 10px 0;
+}
+
+
+
+
+#lang .container{
+    border-bottom: 1px solid #FFFFFF99;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+#lang li, #policy li{
+    padding: 0 10px 20px 10px;
+    display: inline-block;
+}
+
+/* sovrascrivo i margini dati nelle regole generali per evitare che in fondo
+alla pagina si con il margin-bottom di 40px ci sia uno stacco tra sfondo header
+e sfondo body */
+#policy{
+    margin-bottom: 0;
+}
+
+#policy .column{
+    float: left;
+    width: 50%;
+}
+
+#policy .column:last-child{
+    text-align: right;
+}
+
+#policy p{
+    padding-top: 0;
+    font-weight: 700;
+    color: white;
+}
