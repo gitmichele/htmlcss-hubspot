@@ -481,6 +481,8 @@ footer a{
     font-weight: 700;
 }
 
+/* sezione link veloci */
+/* titoli delle varie liste */
 #fast-links li:first-child a{
     color: white;
     font-weight: 900;
@@ -497,14 +499,17 @@ footer a{
     margin-bottom: 15px;
 }
 
+/* stacco titoli delle lista dal contenut0 */
 #fast-links li:first-child{
     padding-bottom: 20px;
 }
 
+/* distanzio icone social */
 #fast-links i{
-    padding-right: 30px;
+    padding-right: 25px;
 }
 
+/* bottone bianco ultima lista */
 #white-button{
     padding: 10px;
     background-color: #FFFFFF99;
@@ -512,40 +517,46 @@ footer a{
     border-radius: 5px;
 }
 
+/* per paddare il bottone devo selezionare l'intero oggetto della lista */
 #gimmespace{
     padding: 10px 0;
 }
 
 
 
-
+/* sezione seleziona lingua */
+/* posiziono lista orizzontale */
 #lang .container{
     border-bottom: 1px solid #FFFFFF99;
     text-align: center;
     margin-bottom: 30px;
 }
 
+/* spazion gli oggetti delle liste - uguale per le sezione successiva */
 #lang li, #policy li{
     padding: 0 10px 20px 10px;
     display: inline-block;
 }
 
+/* sezione policy */
 /* sovrascrivo i margini dati nelle regole generali per evitare che in fondo
 alla pagina si con il margin-bottom di 40px ci sia uno stacco tra sfondo header
 e sfondo body */
 #policy{
     margin-bottom: 0;
 }
-
+/* due colone uguali */
 #policy .column{
     float: left;
     width: 50%;
 }
 
+/* la colonna di dx allinea il suo contenuto a dx */
 #policy .column:last-child{
     text-align: right;
 }
 
+/* testo del copyright */
 #policy p{
     padding-top: 0;
     font-weight: 700;
