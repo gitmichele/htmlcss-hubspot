@@ -551,3 +551,126 @@ e sfondo body */
     font-weight: 700;
     color: white;
 }
+
+
+
+
+
+/* CHAT */
+.chat-icon-container{
+    position: fixed;
+    width: 70px;
+    height: 70px;
+    background-color: rgb(66, 91, 118);
+    border-radius: 50%;
+    bottom: 0;
+    right: 40px;
+}
+
+.chat-icon-container > div{
+    font-size: 40px;
+    line-height: 70px;
+    text-align: center;
+}
+
+.chat-icon-container a{
+    color: white;
+}
+
+.chat-container{
+    position: fixed;
+    width: 380px;
+    /* height: 500px; */
+    border-radius: 10px;
+    bottom: 100px;
+    right: 40px;
+    background-color: white;
+}
+
+.chat-title{
+    padding: 0 20px;
+    height: 80px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: #2d3e50;
+    line-height: 80px;
+    background-size: contain;
+}
+
+.chat-title span{
+    color: white;
+    font-weight: 700;
+    padding-left: 10px;
+}
+
+#icon-img{
+    display: inline-block;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background-image: url(https://static.hsappstatic.net/bots-ui-app/ex/bot-avatar.jpg);
+    background-position: center center;
+    background-size: cover;
+    vertical-align: middle;
+}
+
+#online{
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: green;
+    border-radius: 50%;
+    border: 2px solid white;
+    bottom: 0;
+    right: 0;
+}
+
+
+.chat-main{
+    border-bottom: 3px solid lightgray;
+}
+
+.chat-main .column:first-child{
+    float: left;
+    width: 20%;
+    height: 250px;
+    padding: 20px 20px;
+}
+
+.chat-main .column:last-child{
+    float: left;
+    width: 80%;
+    padding-top: 40px;
+    padding-right: 30px;
+}
+
+.chat-main img{
+    width: 35px;
+}
+
+.chat-main .msg-container{
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(220,220,220);
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.chat-main .msg-button a{
+    padding: 10px;
+    border: 1px solid #2d3e50;
+    border-radius: 5px;
+}
+
+.chat-main .msg-button li{
+    margin: 30px 0;
+}
+
+.chat-text p{
+    line-height: 15px;
+    color: gray;
+    padding: 20px 10px 20px 20px;
+}
