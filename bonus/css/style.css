@@ -100,8 +100,16 @@ h4{
         z-index: 999;
 }
 
-nav .column{
+nav .column:first-child{
     float: left;
+    width: 50%;
+    line-height: 80px;
+    font-weight: 700;
+    height: 80px;
+}
+
+nav .column:last-child{
+    float: right;
     width: 50%;
     line-height: 80px;
     font-weight: 700;
@@ -163,7 +171,7 @@ header nav:last-child img{
 }
 
 /* margine sx a tutte le voci della navbar inferiore di dx*/
-#nav2-right li{
+#nav2-right > li{
     margin-left: 20px;
 }
 
@@ -177,7 +185,44 @@ header nav:last-child{
     border-top: 1px solid black;
 }
 
+/* menù a tendina lingue*/
+.nav-links{
+    position: fixed;
+    background-color: white;
+    width: 100px;
+    font-weight: 400;
+    box-shadow: 0px 0px 3px 1px lightgray;
+    border-radius: 2px;
+    display: none;
+}
 
+.nav-links li{
+    display: list-item;
+    line-height: 40px;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+    padding-left: 15px;
+}
+
+/* trinagolino sopra il menù delle lingue*/
+#nav1-left .nav-links::before{
+    content: "";
+    position: absolute;
+    border-style: solid;
+    border-width: 10px 12px;
+    border-color: transparent transparent white transparent;
+    right: 15%;
+    top: -20px;
+}
+
+#nav1-left a:first-child:hover + .nav-links{
+    display: block;
+}
+
+
+
+/*  */
 
 
 /* JUMBOTRON */
