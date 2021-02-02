@@ -577,17 +577,20 @@ e sfondo body */
     color: white;
 }
 
+
+/* pagina chat a scomparsa */
 .chat-container{
     position: fixed;
     width: 380px;
-    /* height: 500px; */
     border-radius: 10px;
     bottom: 100px;
     right: 40px;
     background-color: white;
+    display: none;
 }
 
-.chat-title{
+/* chat header */
+.chat-header{
     padding: 0 20px;
     height: 80px;
     border-top-right-radius: 10px;
@@ -597,7 +600,7 @@ e sfondo body */
     background-size: contain;
 }
 
-.chat-title span{
+.chat-header span{
     color: white;
     font-weight: 700;
     padding-left: 10px;
@@ -628,6 +631,7 @@ e sfondo body */
 }
 
 
+/* chat main */
 .chat-main{
     border-bottom: 3px solid lightgray;
 }
@@ -669,8 +673,74 @@ e sfondo body */
     margin: 30px 0;
 }
 
+
+/* chat text section */
 .chat-text p{
     line-height: 15px;
     color: gray;
     padding: 20px 10px 20px 20px;
+}
+
+
+/* chet type here */
+.chat-type-here .column:first-child{
+    width: calc(85% - 10px);
+    float: left;
+}
+
+.chat-type-here .column:last-child{
+    width: 15%;
+    float: left;
+    text-align: center;
+
+}
+
+.chat-type-here input{
+    font-size: 18px;
+    background-color: #F0F0F0;
+    border-style: none;
+    padding: 10px;
+    margin: 20px 15px 10px 10px;
+    border-radius: 5px;
+    width: 100%;
+}
+
+.chat-type-here input::placeholder{
+    color: #D0D0D0;
+}
+
+.chat-type-here button{
+    background-color: transparent;
+    border-style: none;
+    padding: 28px 5px 0 10px;
+}
+
+
+.chat-type-here .fa-telegram-plane{
+    font-size: 25px;
+    color: #D0D0D0;
+}
+
+
+/* chat footer */
+.chat-footer{
+    font-size: 13px;
+    color: gray;
+    text-align: center;
+    margin-bottom: 10px;
+    line-height: 20px;
+}
+
+.chat-footer a{
+    color: #ff7a59;
+}
+
+.chat-footer img{
+    display: inline-block;
+    width: 20px;
+    vertical-align: bottom;
+}
+
+.chat-icon-container:hover + .chat-container{
+    display: block;
 }
