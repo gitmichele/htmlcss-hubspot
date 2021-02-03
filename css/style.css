@@ -100,8 +100,16 @@ h4{
         z-index: 999;
 }
 
-nav .column{
+nav .column:first-child{
     float: left;
+    width: 30%;
+    line-height: 80px;
+    font-weight: 700;
+    height: 80px;
+}
+
+nav .column:last-child{
+    float: right;
     width: 50%;
     line-height: 80px;
     font-weight: 700;
@@ -483,7 +491,7 @@ footer a{
 
 /* sezione link veloci */
 /* titoli delle varie liste */
-#fast-links li:first-child a{
+#fast-links li:first-child a:not(#social a){
     color: white;
     font-weight: 900;
 }
@@ -505,8 +513,9 @@ footer a{
 }
 
 /* distanzio icone social */
-#fast-links i{
-    padding-right: 25px;
+#social li{
+    display: inline-block;
+    margin: 0 20px 0 0;
 }
 
 /* bottone bianco ultima lista */
